@@ -58,7 +58,7 @@ const TranslatePage = () => {
 				<div className="flex px-4 py-3">
 					<div className="h-10 w-10 rounded flex-shrink-0 bg-gray-300">
 						<div className="w-10 h-10 relative">
-							<Image src="/user.png" alt="user" className="h-6 w-6 rounded-full" fill />
+							<Image src="/bot.png" alt="bot" className="h-6 w-6 rounded-full" fill />
 						</div>
 					</div>
 					<div className="ml-2">
