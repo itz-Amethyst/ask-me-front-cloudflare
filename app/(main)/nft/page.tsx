@@ -26,17 +26,14 @@ const NFTPage = () => {
 		setShowMessage(true);
 		setIsLoading(true)
 
-		console.log(`${BASE_URL}/api/nft`)
 		axios.post(`${BASE_URL}/api/nft`, {content: message})
 			.then(response => {
                 setIsLoading(false);
-				console.log(response)
 
                 // Update the messages state if needed
                 const userMessage = { content: message, sender: 'user' };
                 const botMessage = { nft_image: `data:image/png;base64, ${response.data.nft_image}`, sender: 'bot' };
                 setMessages([...messages, userMessage, botMessage]);
-				console.log(messages)
 			})
 			.catch(error => {
                 console.error('Error:', error);
